@@ -23,7 +23,7 @@ const Register = () => {
             confirmed_password: confirmedPassword        
         }
 
-            axios.post("register", data)
+            axios.post("register", data) //localhost.../register
                 .then(
                     res => {
                         console.log(res);

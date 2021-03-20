@@ -14,7 +14,7 @@ const Login = () => {
             password: password,
         };
 
-        axios.post("login", data) //returns a token
+        axios.post("login", data) //returns a token //localhost.../login
             .then(res => {
                 localStorage.setItem('token', res.token); //save token in localStorage
             }
