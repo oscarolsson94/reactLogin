@@ -1,5 +1,6 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -19,6 +20,12 @@ function App() {
                   </div>
             </div>
           </nav>
+
+          <div className="auth-wrapper">
+              <div className="auth-inner" >
+                    <Home />
+              </div>
+          </div>
 
     </div>
   );
