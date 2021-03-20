@@ -4,7 +4,13 @@ import React, { useEffect } from 'react'
 const Home = () => {
 
     useEffect(() => {
-        axios.get() //localhost../
+        axios.get('user') //hit user route /validate-token
+            .then(res => {
+            console.log(res);
+            },
+                err => {
+                console.log(err);
+            })
     })
 
     return (
