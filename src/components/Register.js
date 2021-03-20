@@ -2,9 +2,37 @@ import React from 'react'
 
 const Register = () => {
     return (
-        <div>
-            <h2>Login Page</h2>
-        </div>
+        <form >
+            <h3>Sign Up</h3>
+
+            <div className="form-group">
+                <label>First Name</label>
+                <input type="text" className="form-control" placeholder="First Name" required />
+            </div>
+
+            <div className="form-group">
+                <label>Last Name</label>
+                <input type="text" className="form-control" placeholder="Last Name" required />
+            </div>
+
+            <div className="form-group">
+                <label>Email</label>
+                <input type="email" className="form-control" placeholder="Email" required />
+            </div>
+
+            <div className="form-group">
+                <label>Password</label>
+                <input type="password" className="form-control" placeholder="Password" required />
+            </div>
+
+            <div className="form-group">
+                <label>Confirm Password</label>
+                <input type="password" className="form-control" placeholder="Confirm Password" required />
+            </div>
+
+            <button className="btn btn-primary btn-block">Sign Up</button>
+
+        </form>
     );
 };
 
