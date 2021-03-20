@@ -23,7 +23,7 @@ const Register = () => {
             confirmed_password: confirmedPassword        
         }
 
-            axios.post("http://localhost:3000/register", data)
+            axios.post("register", data)
                 .then(
                     res => {
                         console.log(res);
