@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Navigation from './components/Navigation';
 import Login from './components/Login';
 import Register from './components/Register';
-import { BroserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
     return (
@@ -15,13 +15,13 @@ function App() {
             <div className="auth-wrapper">
                     <div className="auth-inner" >
                         <Switch>
-                            <Route path="/">
+                            <Route exact path="/">
                                 <Home />
                             </Route>
-                            <Route path="/login">
+                            <Route exact path="/login">
                                 <Login />
                             </Route>
-                            <Route path="/register">
+                            <Route exact path="/register">
                                 <Register />
                             </Route>
                         </Switch>    
