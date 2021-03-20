@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 
 
@@ -11,17 +12,27 @@ const Register = () => {
     
 
     const handleSubmit = (e) => {
-    e.preventDefault();
+        e.preventDefault();
 
-    const data = {
-        first_name: firstName,
-        last_name: lastName,
-        email: email,
-        password: password,
-        confirmed_password: confirmedPassword        
-    }
+        const data = {
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            password: password,
+            confirmed_password: confirmedPassword        
+        }
 
-    console.log("works!");
+            axios.post("http://localhost:3000/register", data)
+                .then(
+                    res => {
+                        console.log(res);
+                    }
+            ).catch(
+                error => {
+                    console.log(error);
+                    }
+                )
+    
     }
     
     return (
