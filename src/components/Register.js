@@ -1,8 +1,16 @@
 import React from 'react'
 
+
+
 const Register = () => {
+
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("works!");
+    }
+    
     return (
-        <form >
+        <form onSubmit={handleSubmit}>
             <h3>Sign Up</h3>
 
             <div className="form-group">
