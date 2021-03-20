@@ -13,6 +13,7 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        //nollställa states igen?
 
         const data = {
             first_name: firstName,
