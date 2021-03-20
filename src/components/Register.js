@@ -1,11 +1,26 @@
-import React from 'react'
-
+import React, { useState } from 'react'
 
 
 const Register = () => {
 
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmedPassword, setConfirmedPassword] = useState("");
+    
+
     const handleSubmit = (e) => {
     e.preventDefault();
+
+    const data = {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        password: password,
+        confirmed_password: confirmedPassword        
+    }
+
     console.log("works!");
     }
     
@@ -15,27 +30,32 @@ const Register = () => {
 
             <div className="form-group">
                 <label>First Name</label>
-                <input type="text" className="form-control" placeholder="First Name" required />
+                <input type="text" className="form-control" placeholder="First Name" required
+                    onChange={(e) => setFirstName(e.target.value)} />
             </div>
 
             <div className="form-group">
                 <label>Last Name</label>
-                <input type="text" className="form-control" placeholder="Last Name" required />
+                <input type="text" className="form-control" placeholder="Last Name" required
+                onChange={(e) => setLastName(e.target.value)}/>
             </div>
 
             <div className="form-group">
                 <label>Email</label>
-                <input type="email" className="form-control" placeholder="Email" required />
+                <input type="email" className="form-control" placeholder="Email" required
+                onChange={(e) => setEmail(e.target.value)}/>
             </div>
 
             <div className="form-group">
                 <label>Password</label>
-                <input type="password" className="form-control" placeholder="Password" required />
+                <input type="password" className="form-control" placeholder="Password" required
+                onChange={(e) => setPassword(e.target.value)}/>
             </div>
 
             <div className="form-group">
                 <label>Confirm Password</label>
-                <input type="password" className="form-control" placeholder="Confirm Password" required />
+                <input type="password" className="form-control" placeholder="Confirm Password" required
+                onChange={(e) => setConfirmedPassword(e.target.value)}/>
             </div>
 
             <button className="btn btn-primary btn-block">Sign Up</button>
