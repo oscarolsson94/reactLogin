@@ -8,6 +8,19 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const data = {
+            email: email,
+            password: password,
+        };
+
+        axios.post("http://localhost:3000/login", data)
+            .then(res => {
+                console.log(res);
+            }
+            ).catch(error => {
+                console.log(error);
+            })
     }
 
     return (

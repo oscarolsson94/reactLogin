@@ -28,7 +28,7 @@ const Register = () => {
                     res => {
                         console.log(res);
                     }
-            ).catch(
+                ).catch(
                 error => {
                     console.log(error);
                     }
