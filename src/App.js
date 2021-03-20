@@ -1,25 +1,11 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-      <div className="App">
-          <nav className="navbar navbar-expand navbar-light fixed-top" >
-              <div className="container">
-                  <a href="" className="navbar-brand" >Home</a>
-                  <div className="collapse navbar-collapse">
-                      <ul className="navbar-nav ml-auto">
-                          <li className="nav-item">
-                              <a href="" className="nav-link" >Login</a>
-                          </li>
-                          <li className="nav-item">
-                              <a href="" className="nav-link" >Sign up</a>
-                          </li>
-                      </ul>
-                  </div>
-            </div>
-          </nav>
+      <div className="App">    
 
           <div className="auth-wrapper">
               <div className="auth-inner" >
