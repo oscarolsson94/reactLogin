@@ -13,7 +13,7 @@ function App() {
             <Navigation />
           
             <div className="auth-wrapper">
-                    <div className="auth-inner" >
+                <div className="auth-inner" >
                         <Switch>
                             <Route exact path="/">
                                 <Home />
