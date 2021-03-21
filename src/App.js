@@ -28,6 +28,9 @@ function App() {
                             <Route exact path="/forgot">
                                 <Forgot />
                             </Route>
+                            <Route exact path="/reset/:id">
+                                <ResetPassword />
+                            </Route>
                         </Switch>    
                 </div>
             </div>

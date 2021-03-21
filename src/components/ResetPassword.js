@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const ResetPassword = () => {
 
@@ -7,7 +8,24 @@ const ResetPassword = () => {
 
     handleSubmit = () => {
         e.preventDefault();
-        
+
+        const data = {
+            token: props.match.params.id,        //this will go to the Route component in app and grab the id
+            password,           
+        };
+
+        if (password === confirmPassword) {
+            axios.post("reset", data).then(
+                res => {
+                    console.log(res);
+                }
+            ).catch(
+                err => {
+                    console.log(err);
+                }
+            );
+        }
+
     }
 
     return (
@@ -22,7 +40,7 @@ const ResetPassword = () => {
 
             <div className="form-group">
                 <label>Confirm Password</label>
-                <input type="password" className="form-control" placeholder="Password" required
+                <input type="password" className="form-control" placeholder="Confirm Password" required
                 onChange={(e) => setConfirmPassword(e.target.value)}/>
             </div>
 
