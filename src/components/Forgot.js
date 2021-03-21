@@ -1,9 +1,29 @@
+import axios from 'axios';
 import React from 'react'
 
 const Forgot = () => {
 
+    const [email, setEmail] = useState("");
+
     handleSubmit = () => {
         e.preventDefault();
+
+        const data = {
+            email
+        };
+
+        axios.post("forgot", data) //post to /forgot   (send email api route)
+            .then(
+                res => {
+                    console.log(res);
+                }
+            ).catch(
+                err => {
+                    console.log(err);
+                }
+            );
+        
+
     };
 
     return (
