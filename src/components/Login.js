@@ -47,6 +47,9 @@ const Login = () => {
             </div>
 
             <button className="btn btn-primary btn-block">Log in</button>
+            <p className="forgot-password text-right">
+                <Link to={"/forgot"}>Forgot password?</Link>
+            </p>
 
         </form>
     );
