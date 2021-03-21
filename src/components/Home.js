@@ -24,11 +24,18 @@ const Home = () => {
             })
     })
 
-    return (
+    
+
+        if (state.user) { //global state
+            return (
+                
+            )
+        }
+    
         <div>
             <h2>You are not logged in</h2>
         </div>
-    )
+    
 }
 
 export default Home;
