@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import { Redirect } from 'react-router';
 
 const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loggedIn, setLoggedIn] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,6 +23,10 @@ const Login = () => {
             ).catch(error => {
                 console.log(error);
             })
+    }
+
+    if (loggedIn) {
+        return <Redirect to={"/"} />;
     }
 
     return (
