@@ -7,28 +7,22 @@ const Home = () => {
 
     useEffect(() => {
 
-    const config = {
-        headers: {
-            Authorization: "Bearer " + localStorage.getItem('token')
-        }
-    };
-
-    axios.get('user', config) //hit user route /users or /validate-token, needs a route that returns user data based on token
+        axios.get('user') //hit user route /users or /validate-token, needs a route that returns user data based on token
             .then(res => {
                 setState({ // use the global method
                     user: res.data
                 });
             },
                 err => {
-                console.log(err);
-            })
-    })
+                    console.log(err);
+                })
+    });
 
     
 
         if (state.user) { //global state
             return (
-                <h2>Hi {state.user.first_name}</h2>
+                <h2>Hi {state.user.first_name}</h2> //print something personal from user object if user is not empty
             )
         }
         return (

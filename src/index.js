@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 
 axios.defaults.baseURL = "http://localhost:3000/"; //base url for all axios calls
+axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token"); //common header for all api-calls
 
 ReactDOM.render(
   <React.StrictMode>
