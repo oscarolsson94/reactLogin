@@ -2,6 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Navigation = () => {
+
+    handleLogout = () => {
+        localStorage.clear();
+        setUser({}); //on log out, clear localStorage and set the global user object to an empty object
+    };
     
     if(user){ //depending on global state variable render different nav
         return (
@@ -11,8 +16,8 @@ const Navigation = () => {
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <Link to="/" onClick={() => localStorage.clear()} className="nav-link" >Log out</Link>
-                             </li> {/* we also need to set state to default, aka empty */}
+                                <Link to="/" onClick={handleLogout} className="nav-link" >Log out</Link>
+                             </li> 
                         </ul>
                     </div>
                 </div>
