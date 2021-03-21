@@ -10,7 +10,7 @@ const ResetPassword = () => {
         e.preventDefault();
 
         const data = {
-            token: props.match.params.id,        //this will go to the Route component in app and grab the id
+            token: props.match.params.id,        //this will go to the Route component in app.js and grab the id
             password,           
         };
 
