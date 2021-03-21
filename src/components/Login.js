@@ -19,6 +19,7 @@ const Login = () => {
         axios.post("login", data) //returns a token //localhost.../login
             .then(res => {
                 localStorage.setItem('token', res.data.token); //save token in localStorage
+                setLoggedIn(true);
             }
             ).catch(error => {
                 console.log(error);
