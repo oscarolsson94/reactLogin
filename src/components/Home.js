@@ -9,7 +9,7 @@ const Home = () => {
 
     const config = {
         headers: {
-            Authorization: "Bearer " + localStorage.getItem('token');
+            Authorization: "Bearer " + localStorage.getItem('token')
         }
     };
 
@@ -28,13 +28,14 @@ const Home = () => {
 
         if (state.user) { //global state
             return (
-                
+                <h2>Hi {state.user.first_name}</h2>
             )
         }
-    
+        return (
         <div>
             <h2>You are not logged in</h2>
         </div>
+        )
     
 }
 
