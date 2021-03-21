@@ -1,6 +1,11 @@
 import React from 'react'
 
 const Forgot = () => {
+
+    handleSubmit = () => {
+        e.preventDefault();
+    };
+
     return (
         <form onSubmit={handleSubmit}>
             <h3>Forgot password</h3>
@@ -11,7 +16,7 @@ const Forgot = () => {
                 onChange={(e) => setEmail(e.target.value)}/>
             </div>
 
-            <button className="btn btn-primary btn-block">Log in</button>
+            <button className="btn btn-primary btn-block">Submit</button>
 
         </form>
     );

@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Login from './components/Login';
 import Register from './components/Register';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Forgot from './components/Forgot';
 
 function App() {
     return (
@@ -23,6 +24,9 @@ function App() {
                             </Route>
                             <Route exact path="/register">
                                 <Register />
+                            </Route>
+                            <Route exact path="/forgot">
+                                <Forgot />
                             </Route>
                         </Switch>    
                 </div>
